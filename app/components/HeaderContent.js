@@ -14,7 +14,7 @@ class HeaderContent extends Component{
         /*formData.name = this.refs.name.value;*/
         this.props.sendClientsCallback(formData);
         yaCounter44418460.reachGoal('FIVE-ERRORS-GET');
-        return true;
+        yaCounter44418460.reachGoal('ALL_FORMS')
     }
 
     clientsNotification() {
