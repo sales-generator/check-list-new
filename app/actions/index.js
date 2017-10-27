@@ -76,9 +76,9 @@ export const knowClients = (response) => {
 
 export const sendClientsCallback = formData => {
     return dispatch => {
-        return requestCallback('./send_mail.php', formData)
+        return requestCallback('https://salesgenerator.us12.list-manage.com/subscribe/post-json?u=8683c145d18d52020440c0d6c&amp;id=57e190018c', formData)
             .then(json => {
-                dispatch(knowClients(json));
+                dispatch(showModal(true));
             })
             .catch(err => console.log('error'));
     }
@@ -86,9 +86,10 @@ export const sendClientsCallback = formData => {
 
 export const sendCallback = formData => {
     return dispatch => {
-        return requestCallback('./send_mail.php', formData)
+        return requestCallback('https://salesgenerator.us12.list-manage.com/subscribe/post-json?u=8683c145d18d52020440c0d6c&amp;id=57e190018c', formData)
             .then(json => {
-                dispatch(sendRequestCallback(json));
+                console.log(json);
+                /*dispatch(sendRequestCallback(json));*/
             })
             .catch(err => console.log('error'));
     }

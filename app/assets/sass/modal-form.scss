@@ -12,7 +12,6 @@
   .popup-form{
     margin: auto;
     top: 30%;
-    padding: 20px;
     background: #fff;
     border-radius: 5px;
     width: 30%;
@@ -49,11 +48,22 @@
         color: black;
       }
     }
+    h2{
+      font-size: 30px;
+      text-align: center;
+      margin: 0px 0 20px;
+      font-family: $headers-font-regular;
+      color: white;
+      background-color: rgb(77, 180, 93);
+      border-top-left-radius: 5px;
+      line-height: 45px;
+      border-top-right-radius: 5px;
+    }
     p{
       font-family: $headers-font-regular;
-      font-size: 22px;
+      font-size: 17px;
       text-align: center;
-      padding: 0 40px;
+      padding: 0 40px 20px;
     }
     span{
       color: rgb(199, 29, 26);

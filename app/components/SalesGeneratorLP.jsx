@@ -1,7 +1,6 @@
 import React from 'react';
 import Header from './Header.jsx';
 import ModalForm from './ModalForm';
-import MobileModalForm from  './MobileModalForm';
 import  { configureAnchors} from 'react-scrollable-anchor';
 
 class App extends React.Component{
@@ -12,7 +11,7 @@ class App extends React.Component{
     render() {
        return(
            <div>
-               {screen.width < 1024 ? <MobileModalForm/> : <ModalForm/>}
+               <ModalForm/>
                <Header/>
            </div>
        )
