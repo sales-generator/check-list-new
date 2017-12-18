@@ -11,6 +11,7 @@ class HeaderContent extends Component{
         e.preventDefault();
         let formData = new FormData();
         formData.append('EMAIL', this.refs.email.value);
+        roistatGoal.reach({name: this.refs.email.value, phone: '', email: this.refs.email.value, leadName: 'Лендинг_Чек_лист', text: 'Лендинг ЧЛ - 5 самых распростаранненных ошибок - получить бесплатно'});
         this.props.sendClientsCallback(formData);
         this.refs.email.value = '';
         yaCounter44418460.reachGoal('FIVE-ERRORS-GET');
