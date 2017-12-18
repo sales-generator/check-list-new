@@ -9,10 +9,10 @@ class HeaderContent extends Component{
 
     btnSubmitHandler(e) {
         e.preventDefault();
-        let formData = {'form-name': 'five-errors'};
-        formData.email = this.refs.email.value;
-        /*formData.name = this.refs.name.value;*/
+        let formData = new FormData();
+        formData.append('EMAIL', this.refs.email.value);
         this.props.sendClientsCallback(formData);
+        this.refs.email.value = '';
         yaCounter44418460.reachGoal('FIVE-ERRORS-GET');
         yaCounter44418460.reachGoal('ALL_FORMS')
     }
@@ -70,7 +70,7 @@ class HeaderContent extends Component{
                         {this.clientsNotification()}
                         <form className="form-group free-form" onSubmit={this.btnSubmitHandler.bind(this)}>
                             {/*<input type="text" ref="name" className="form-control" placeholder="Имя *" required/>*/}
-                            <input type="email" ref="email" className="form-control" placeholder="Email *"  required/>
+                            <input type="email" ref="email"  name="EMAIL" className="form-control" placeholder="Email *"  required/>
                             <input type="submit" className="btn"  value="Получить бесплатно"/>
                         </form>
                                     <p className="header__content-confirm">

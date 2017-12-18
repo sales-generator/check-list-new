@@ -1,11 +1,11 @@
-export const ajaxJson = (url, method = 'get', params) => {
+export const ajaxJson = (url, params) => {
     return fetch(url, {
-        method,
-        credentials: 'same-origin',
-        headers: {"Content-type": "application/x-www-form-urlencoded"},
-        body: params && 'formData=' + JSON.stringify(params)
-    })
-        .then(response => response.json());
+        method: 'POST',
+        mode: 'no-cors',
+        cache: 'no-cache',
+        headers: {"Content-type": "application/json", 'Access-Control-Allow-Headers': true},
+        body: params
+    }).then(response => response.arrayBuffer());
 };
 
 export const getJson = (url, params) => {
@@ -18,7 +18,7 @@ export const getJson = (url, params) => {
 };
 
 export const requestCallback = (url, params) => {
-    return ajaxJson(url, 'post', params);
+    return ajaxJson(url, params);
 };
 
 export const putJson = (url, params) => {

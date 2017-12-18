@@ -153,9 +153,12 @@
   }
 
   .popup-overlay .popup-form{
-    width: 90%;
+    width: 100%;
     input[type="submit"]{
       width: 100%;
+    }
+    h2{
+      font-size: 25px;
     }
   }
 
@@ -182,10 +185,6 @@
   }
   .popup-overlay .popup-form{
     top: 5%;
-    p{
-      font-size: 18px;
-      padding: 0;
-    }
   }
 
   .arrow-right img {
